@@ -1,10 +1,18 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$dark: #343946
+$lightBlue: #c9e8f2
+$gray: #515765
+$light: #f2f5f7
+$green: #d5e8bb
+$lightGreen: #97b5b8
+$accent: $green
 $fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$textcolor: $dark // Text Color
 $lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$roboto: roboto-oh5, sans-serif // User Font Family
+$montserrat: montserrat, sans-serif // User Font Family
+$userfont: $montserrat
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -15,8 +23,8 @@ $gutter: $grid-gutter-width
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
 
@@ -31,6 +39,10 @@ $gutter: $grid-gutter-width
 @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('montserrat', normal, 400, '../fonts/montserrat-v15-latin_cyrillic-regular.woff2')
+@include font('montserrat', semi-bold, 500, '../fonts/montserrat-v15-latin_cyrillic-500.woff2')
+@include font('montserrat', bold, 600, '../fonts/montserrat-v15-latin_cyrillic-600.woff2')
+@include font('montserrat', extra-bold, 800, '../fonts/montserrat-v15-latin_cyrillic-800.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -56,3 +68,10 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+
+a
+  color: inherit
+  transition: all 0.25s ease-out
+  &:hover
+    color: $lightGreen
+    text-decoration: none
