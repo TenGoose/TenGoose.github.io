@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+.game-board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: clamp(300px, 55vw, 100%);
+  margin: auto;
+  margin-bottom: 3rem;
+  background-color: #f5cb39;
+}
+.game-cell {
+  width: 100%;
+  height: auto;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 2px solid rgb(63, 63, 63);
+  cursor: pointer;
+}
+.game-cell.cross {
+  position: relative;
+}
+.game-cell.cross::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  --weight: 3px;
+  --aa: 1px;
+  --color: #0085c3;
+  border-radius: 3px;
+  background: linear-gradient(
+      45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    );
+}
+.game-cell.circle {
+  position: relative;
+}
+.game-cell.circle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  width: 80%;
+  height: 80%;
+  border: 6px solid #0085c3;
+  border-radius: 100%;
+}
+.game-reset {
+  background-color: rgb(143, 172, 29);
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  transition: all 250ms ease-in;
+  float: right;
+}
+.game-reset:hover {
+  background-color: rgb(40, 189, 53);
+}
