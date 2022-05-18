@@ -10,22 +10,22 @@ export default class mainScene extends Phaser.Scene {
     this.speedBooster;
   }
   preload() {
-    this.load.image("sky", "../../assets/sky.png");
-    this.load.image("ground", "../../assets/ground.png");
-    this.load.image("coin", "../../assets/coin.png", {
+    this.load.image("sky", "./../../assets/sky.png");
+    this.load.image("ground", "./../../assets/ground.png");
+    this.load.image("coin", "./../../assets/coin.png", {
       frameWidth: 30,
       frameHeight: 30,
     });
-    this.load.image("speedBooster", "../../assets/boosters/speed.png", {
+    this.load.image("speedBooster", "./../../assets/boosters/speed.png", {
     
     });
-    this.load.image("platform", "../../assets/platform.png");
-    this.load.spritesheet("player", "../../assets/maingg/player.png", {
+    this.load.image("platform", "./../../assets/platform.png");
+    this.load.spritesheet("player", "./../../assets/maingg/player.png", {
       frameWidth: 32,
       frameHeight: 32,
     });
-    this.load.image("butcher", "../../assets/Enemies/butcher.png");
-    this.load.audio("ding", "../../assets/ding.wav");
+    this.load.image("butcher", "./../../assets/Enemies/butcher.png");
+    this.load.audio("ding", "./../../assets/ding.wav");
   }
 
   create() {
