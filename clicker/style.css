@@ -1,0 +1,102 @@
+
+body {
+    align-items: center;
+    background: rgb(198, 211, 170);
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 25px;
+    width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    --color: rgb(133, 145, 83);
+    --border-color: rgb(133, 145, 83);
+    --shadow-color: rgb(112, 20, 20);
+
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    width: 200px;
+    height: 75px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 2rem;
+    border: none;
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: bold;
+    background-color: var(--color);
+    box-shadow: 0 -3px var(--color),
+                3px 0 var(--color),
+                0 3px var(--color),
+                -3px 0 var(--color),
+                0 -6px var(--border-color),
+                3px -3px var(--border-color),
+                6px 0 var(--border-color),
+                0 6px var(--border-color),
+                -3px 3px var(--border-color),
+                -6px 0 var(--border-color),
+                -3px -3px var(--border-color),
+                3px 3px var(--border-color),
+                0px 9px var(--shadow-color),
+                3px 6px var(--shadow-color),
+                6px 3px var(--shadow-color),
+                0px 9px var(--shadow-color),
+                -3px 6px var(--shadow-color),
+                -6px 3px var(--shadow-color);
+}
+
+#button:active {
+    top: 6px;
+	box-shadow: 0 -3px var(--color),
+                3px 0 var(--color),
+                0 3px var(--color),
+                -3px 0 var(--color),
+                0 -6px var(--border-color),
+                3px -3px var(--border-color),
+                6px 0 var(--border-color),
+                0 6px var(--border-color),
+                -3px 3px var(--border-color),
+                -6px 0 var(--border-color),
+                -3px -3px var(--border-color),
+                3px 3px var(--border-color),
+                0px 6px var(--shadow-color),
+                3px 3px var(--shadow-color),
+                6px 0px var(--shadow-color),
+                0px 6px var(--shadow-color),
+                -3px 3px var(--shadow-color),
+                -6px 0px var(--shadow-color);
+}
+
+#restart {
+    background-color: rgb(133, 145, 83);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: sticky;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: all 200ms ease-in;
+}
+#restart:hover {
+    background-color: rgb(101, 112, 56);
+  }
+  
+#restart:active {
+    background-color: rgb(101, 112, 56);
+  
+  }
