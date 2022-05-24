@@ -30,6 +30,7 @@ body {
   border-radius: 10px;
   border: 2px solid;
   border-color: #222;
+  cursor: pointer;
 }
 #addCard {
   top: 10px;
@@ -38,6 +39,11 @@ body {
 #reset {
   right: 10px;
   bottom: 10px;
+}
+#addCard:disabled,
+#reset:disabled {
+  filter: contrast(0.5);
+  cursor: not-allowed;
 }
 #cards {
   position: absolute;
@@ -63,8 +69,8 @@ body {
   color: #fff;
 }
 .card {
-  width: auto;
-  aspect-ratio: 3 / 5;
+  width: 40px;
+  height: 65px;
   border-radius: 5px;
   background-color: #f0f0f0;
   border: 1px solid #2d2d2d;

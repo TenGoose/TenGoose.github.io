@@ -31,7 +31,7 @@ function shuffleDeck() {
   return deck;
 }
 
-// берет карду из колоды и удаляет её из массива колоды
+// берет карту из колоды и удаляет её из массива колоды
 
 function takeCard(deck) {
   return deck.pop();
@@ -112,13 +112,14 @@ function updateScore(card) {
 // проверяем статус игры
 
 function checkGameStatus() {
-  //   score > 21 ? (gameIsActive = false) : (gameIsActive = true);
   if (score > 21) {
     gameIsActive = false;
     notificationWrapper.innerHTML = "Перебор, вы проиграли!";
+    addCardBtn.disabled = true;
   } else if (score === 21) {
     gameIsActive = false;
     notificationWrapper.innerHTML = "Поздравляем, вы победили!!!";
+    addCardBtn.disabled = true;
   }
 }
 
@@ -143,6 +144,7 @@ let resetGame = () => {
   scoreWrapper.innerHTML = "0";
   cardsWrapper.innerHTML = "";
   notificationWrapper.innerHTML = "";
+  addCardBtn.disabled = false;
 };
 
 addCardBtn.addEventListener("click", clickAddCardButtonHandler);
