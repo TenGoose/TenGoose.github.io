@@ -371,7 +371,7 @@ hr {
 }
 
 .section--clients {
-    background: url("../img/clients-bg.jpg");
+    background: url("../img/clients-bg.jpg") center no-repeat;
     background-size: cover;
 }
 
