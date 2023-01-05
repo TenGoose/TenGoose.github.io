@@ -371,12 +371,12 @@ hr {
 }
 
 .section--clients {
-    background: url(/assets/img/clients-bg.jpg);
+    background: url("../img/clients-bg.jpg");
     background-size: cover;
 }
 
 .section--map {
-    background: url(/assets/img/map-bg.jpg) center no-repeat;
+    background: url("../img/map-bg.jpg") center no-repeat;
     padding: 40px 0;
     background-size: cover;
 }
